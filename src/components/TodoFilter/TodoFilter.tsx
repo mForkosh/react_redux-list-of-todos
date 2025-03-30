@@ -8,15 +8,15 @@ export const TodoFilter: React.FC = () => {
   const filterData = useAppSelector(s => s.filter);
 
   function handllerOnchangeStatus(e: React.ChangeEvent<HTMLSelectElement>) {
-    const statusTodo = e.target.value;
+    const status = e.target.value;
 
-    dispatch(actions.changeStatus(statusTodo));
+    dispatch(actions.changeStatus(status));
   }
 
   function handllerOnchangeQuery(e: React.ChangeEvent<HTMLInputElement>) {
-    const statusTodo = e.target.value;
+    const query = e.target.value;
 
-    dispatch(actions.changeQuery(statusTodo));
+    dispatch(actions.changeQuery(query));
   }
 
   function clearInput() {
